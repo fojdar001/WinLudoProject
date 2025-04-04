@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/Feautures.css'
 
 const features = [
   { title: 'Instant Withdrawal', desc: 'Get your money in seconds via UPI/QR.' },
@@ -9,7 +10,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-5 bg-light">
+    <section className="features-section py-5 bg-light">
       <div className="container">
         <h2 className="text-center fw-bold mb-5 fs-2">Why Choose Us?</h2>
         <div className="row g-4">

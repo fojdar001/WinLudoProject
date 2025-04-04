@@ -1,6 +1,10 @@
 .hero-section {
-    background-color: #e8ebf7;
+    /* background-color: #e8ebf7; */
     color: #fff;
+    background-image: url(https://wallpapers.com/images/hd/ludo-king-blue-squares-background-f2l0zc9t3trvwxxz.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
   }
   .lead{
     color: #23255b;
