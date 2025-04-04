@@ -1,0 +1,12 @@
+.hero-section {
+    background-color: #e8ebf7;
+    color: #fff;
+  }
+  .lead{
+    color: #23255b;
+  }
+  .hero-btn{
+    background: linear-gradient(90deg, #1e1f3a, #23255b);
+    color:#fff;
+    
+  }

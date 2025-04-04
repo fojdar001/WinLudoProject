@@ -1,0 +1,47 @@
+.custom-navbar {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #1e1f3a, #23255b);
+  }
+  
+  .logo {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  
+  .nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 10px;
+  }
+  
+  .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0 15px;
+
+  }
+ 
+  .nav-link:hover {
+    color: #ffcc00 !important;
+  }
+  
+  
+  .d-flex {
+    gap: 10px;
+  }
+  

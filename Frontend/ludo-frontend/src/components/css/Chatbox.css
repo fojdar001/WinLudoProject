@@ -6,16 +6,20 @@
 }
 
 .chat-toggle-btn {
-  background: #007bff;
-  color: white;
-  border: none;
+  background:white;
+  color: #23255b;
+  border: 1px solid #23255b;
   border-radius: 50%;
   font-size: 24px;
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
-
+.chat-toggle-btn:hover{
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
+  
+}
 .chat-window {
   width: 300px;
   height: 400px;
@@ -29,7 +33,7 @@
 }
 
 .chat-header {
-  background: #007bff;
+  background: linear-gradient(90deg, #1e1f3a, #23255b);
   color: white;
   padding: 10px;
   font-weight: bold;
@@ -63,7 +67,7 @@
 }
 
 .chat-input button {
-  background: #007bff;
+  background: linear-gradient(90deg, #1e1f3a, #23255b);
   color: white;
   border: none;
   padding: 0 20px;
