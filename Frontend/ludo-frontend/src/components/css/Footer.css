@@ -1,5 +1,6 @@
 .footer-section {
-    background: linear-gradient(90deg, #1e1f3a, #23255b);
+  background: linear-gradient(135deg, #131531, #171a47);
+  box-shadow: 0px 0px 10px #101231ce;
     color: #ddd;
     padding: 40px 0;
     font-size: 14px;
