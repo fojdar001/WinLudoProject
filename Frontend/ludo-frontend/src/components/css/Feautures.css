@@ -42,3 +42,48 @@
       transform: translateY(0);
     }
   }
+  @media (max-width: 480px) {
+    .features-section {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 60px;
+      height: auto; /* Remove fixed height for mobile */
+    }
+  
+    .custom-card {
+      flex-direction: column;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  
+    .custom-card img {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1rem;
+    }
+    .animate-card {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+    
+    .animate-card.delay-1 {
+      animation-delay: 0.2s;
+    }
+    .animate-card.delay-2 {
+      animation-delay: 0.4s;
+    }
+    
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  

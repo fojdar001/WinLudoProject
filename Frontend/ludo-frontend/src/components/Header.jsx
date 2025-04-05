@@ -34,7 +34,7 @@ const Header = () => {
         
           <div className="d-flex">
             <Button as={Link} to="/login" variant="outline-light rounded-pill px-4" className="me-2">Login</Button>
-            <Button as={Link} to="/register" className="rounded-pill px-4"style={{ backgroundColor: "#ffcc00", color: "#23255b"}}>Register</Button>
+            <Button as={Link} to="/register" className="rounded-pill px-4 border-0"style={{ backgroundColor: "#ffcc00", color: "#23255b"}}>Register</Button>
 
           </div>
         </Navbar.Collapse>

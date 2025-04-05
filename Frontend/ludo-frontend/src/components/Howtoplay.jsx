@@ -49,6 +49,8 @@ const HowToPlay = () => {
             <div className="card custom-card text-center h-100 animate-card">
               <div className="card-body">
                 <h5 className="card-title text-gold fw-bold">Login</h5>
+                
+
                 <p className="card-text text-white">Create your account or log in to start playing exciting Ludo matches.</p>
               </div>
             </div>
