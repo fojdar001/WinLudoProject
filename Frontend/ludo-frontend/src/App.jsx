@@ -8,12 +8,9 @@ import Chatbox from './components/Chatbox';
 import ScrollToTop from './components/ScrollToTop';
 import Login from './pages/Login';
 import Header from './components/Header';
-<<<<<<< HEAD
 import OTPVerify from './pages/OTPVerify';
 import Dashboard from './pages/Dashboard';
-=======
 import Howtoplay from './components/howtoplay';
->>>>>>> 836c74f (Your commit message here)
 
 function App() {
   return (
