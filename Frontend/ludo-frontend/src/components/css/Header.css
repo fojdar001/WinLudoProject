@@ -1,6 +1,8 @@
 .custom-navbar {
     padding: 10px 20px;
     background: linear-gradient(90deg, #1e1f3a, #23255b);
+    position: fixed;
+    width: 100%;
   }
   
   .logo {
@@ -44,4 +46,8 @@
   .d-flex {
     gap: 10px;
   }
+  /* @media (max-width: 480px){
+    .custom-navbar{
+      height: 55px;
+    } */
   

@@ -3,10 +3,12 @@
     color: #ddd;
     padding: 40px 0;
     font-size: 14px;
+    z-index: 2;
+    
   }
   
   .footer-section h5 {
-    color: #fff;
+    color: #ffcc00;
     font-weight: 600;
     margin-bottom: 15px;
     text-transform: uppercase;

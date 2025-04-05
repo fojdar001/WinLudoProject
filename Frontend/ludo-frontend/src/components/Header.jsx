@@ -26,7 +26,7 @@ const Header = () => {
           <Nav className="mx-auto nav-center">
             <Nav.Link as={Link} to="/" href="#home" onClick={() => setExpanded(false)}>Home</Nav.Link>
             <Nav.Link href="#features" onClick={() => setExpanded(false)}>About</Nav.Link>
-            <Nav.Link href="#about" onClick={() => setExpanded(false)}>How to Play</Nav.Link>
+            <Nav.Link as={Link} to="/Howtoplay" href="#about" onClick={() => setExpanded(false)}>How to Play</Nav.Link>
             <Nav.Link href="#contact" onClick={() => setExpanded(false)}>Terms & Conditions</Nav.Link>
             <Nav.Link href="#contact" onClick={() => setExpanded(false)}>Help</Nav.Link>
           </Nav>

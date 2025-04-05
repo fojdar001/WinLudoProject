@@ -1,11 +1,17 @@
-.features-section {
-  background: linear-gradient(90deg, #1e1f3a, #23255b);
-  padding-bottom: 100px;
-  height: 70vh;
-  padding-left: 100px;
-  padding-right: 100px;
- 
+.howtoplay-section {
+    background: linear-gradient(135deg, #1e1f3a, #23255b);
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
+  
+  .text-gold {
+    color: #ffcc00;
+  }
+  
+  .section-block {
+    margin-bottom: 2rem;
+  }
+  
   .custom-card {
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid #ffcc00;
@@ -42,3 +48,16 @@
       transform: translateY(0);
     }
   }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .custom-card {
+      padding: 1rem;
+    }
+  
+    .howtoplay-section h2,
+    .howtoplay-section h3 {
+      font-size: 1.5rem;
+    }
+  }
+  

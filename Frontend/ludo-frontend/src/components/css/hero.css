@@ -1,16 +1,72 @@
 .hero-section {
     /* background-color: #e8ebf7; */
     color: #fff;
-    background-image: url(https://wallpapers.com/images/hd/ludo-king-blue-squares-background-f2l0zc9t3trvwxxz.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 70vh;
-  }
-  .lead{
-    color: #23255b;
-  }
-  .hero-btn{
-    background: linear-gradient(90deg, #1e1f3a, #23255b);
-    color:#fff;
+    height: 100vh;
+    overflow: hidden;
     
   }
+  .lead{
+    color: white;
+    font-size:30px;
+    font-weight: 400;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.616);
+  }
+  .hero-btn{
+    color: white;
+    background-color:#23255b;
+    box-shadow: 0px 0px 6px rgba(77, 76, 76, 0.562);
+    margin-left: 290px;
+    margin-top: 100px;
+    
+  }
+  .text-big{
+    color: rgba(255, 255, 255, 0.904) ; /* Golden */
+    /* -webkit-text-stroke: 3px  #23255b; */
+    font-weight: bolder;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.788);
+  }
+  .img-fluid{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .container-text{
+    position: absolute;
+    top: 340px;
+    left: 310px;
+  }
+  @media (max-width: 480px) {
+    .container-text {
+      position: static;
+      transform: none;
+      padding: 1rem;
+      background:linear-gradient(90deg, #1e1f3a, #23255b) ;
+      
+    }
+  
+    .container-text h1 {
+      font-size: 1.5rem;
+      z-index: 1;
+    }
+  
+    .container-text p {
+      font-size: 1rem;
+    }
+  
+    .hero-btn {
+      font-size: 14px;
+      padding: 10px 20px;
+      
+      
+    }
+    .hero-section{
+      height: 50vh;
+    }
+    .img-fluid{
+      margin-top: 60px;
+      height: 90%;
+    
+    }
+  }
+  
