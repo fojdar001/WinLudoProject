@@ -8,6 +8,8 @@ import Chatbox from './components/Chatbox';
 import ScrollToTop from './components/ScrollToTop';
 import Login from './pages/Login';
 import Header from './components/Header';
+import OTPVerify from './pages/OTPVerify';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             }
           />
           <Route path="/register" element={<Register />} />
+          <Route path="/verify" element={<OTPVerify />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} /> 
         </Routes>
 

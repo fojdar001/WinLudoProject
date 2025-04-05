@@ -1,56 +1,81 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const OTPLogin = () => {
+  const [step, setStep] = useState('phone');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [otp, setOtp] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // TODO: Backend se login verify karna hai
-    console.log('Login:', { email, password });
+  const sendOTP = async () => {
+    const response = await fetch("http://localhost:8000/api/send-login-otp/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone_number: phoneNumber })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      setStep("otp");
+      setError('');
+    } else {
+      setError(data.error || "Failed to send OTP");
+    }
+  };
+
+  const verifyOTP = async () => {
+    const response = await fetch("http://localhost:8000/api/verify-login-otp/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone_number: phoneNumber, otp })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      alert("Login successful!");
+      navigate("/dashboard");
+    } else {
+      setError(data.error || "Invalid OTP");
+    }
   };
 
   return (
-    <div className="container d-flex align-items-center justify-content-center min-vh-100">
-      <div className="col-md-6 col-lg-5 shadow p-5 rounded bg-white">
-        <h2 className="text-center mb-4 text-primary">Login to LudoCash</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label">Email address</label>
+    <div className="container d-flex justify-content-center align-items-center min-vh-100">
+      <div className="card p-4 shadow col-md-6 col-lg-4">
+        <h3 className="text-center mb-4 text-primary">Login to LudoCash</h3>
+
+        {step === "phone" ? (
+          <>
+            <label>Enter Phone Number</label>
             <input
-              type="email"
-              className="form-control"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              type="text"
+              className="form-control mb-3"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              placeholder="+91XXXXXXXXXX"
             />
-          </div>
-
-          <div className="mb-4">
-            <label className="form-label">Password</label>
+            <button className="btn btn-primary w-100" onClick={sendOTP}>Send OTP</button>
+          </>
+        ) : (
+          <>
+            <label>Enter OTP</label>
             <input
-              type="password"
-              className="form-control"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
+              type="text"
+              className="form-control mb-3"
+              value={otp}
+              onChange={(e) => setOtp(e.target.value)}
+              placeholder="Enter OTP"
             />
-          </div>
+            <button className="btn btn-success w-100" onClick={verifyOTP}>Verify & Login</button>
+          </>
+        )}
 
-          <button type="submit" className="btn btn-primary w-100">
-            Login
-          </button>
-        </form>
-
-        <p className="mt-3 text-center">
-          Don't have an account? <a href="/register">Register here</a>
-        </p>
+        {error && <div className="alert alert-danger mt-3 text-center">{error}</div>}
       </div>
     </div>
   );
 };
 
-export default Login;
+export default OTPLogin;
