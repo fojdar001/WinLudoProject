@@ -1,13 +1,68 @@
 .features-section {
-  background: linear-gradient(90deg, #1e1f3a, #23255b);
+   background: linear-gradient(90deg, #1e1f3a, #23255b); 
   padding-bottom: 100px;
-  height: 70vh;
+  height: 100vh;
   padding-left: 100px;
   padding-right: 100px;
  
   }
   .custom-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: inherit; /* This allows card-red/green bg to apply */
+    border: 2px solid #ffcc00;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffcc00aa;
+  }
+  
+  /* Ludo Colors with transparent background */
+  .card-red {
+    background: linear-gradient(135deg, rgba(204, 2, 2, 0.993), rgb(163, 41, 41)) !important;
+  }
+  .card-green {
+    background: linear-gradient(135deg, rgb(3, 151, 3), rgb(46, 104, 46)) !important;
+   
+  }
+  .card-yellow {
+    background: linear-gradient(135deg, rgb(179, 179, 3), rgb(187, 177, 41)) !important;
+    
+  }
+  .card-blue {
+    background: linear-gradient(135deg, rgba(2, 88, 175, 0.904), rgba(74, 122, 173, 0.781)) !important;
+  
+  }
+  
+  
+  
+  /* Matching glow on hover */
+  .card-red:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+  .card-green:hover {
+    box-shadow: 0 0 15px rgba(0, 128, 0, 0.5);
+  }
+  .card-yellow:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+  }
+  .card-blue:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+  }
+  
+  
+
+
+   /* .custom-card {
+    background: rgba(255, 255, 255, 0.05); 
     border: 2px solid #ffcc00;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -31,8 +86,16 @@
   .animate-card.delay-2 {
     animation-delay: 0.4s;
   }
+  .animate-card.delay-0 {
+    animation-delay: 0s;
+  }
   
-  @keyframes fadeInUp {
+  .animate-card.delay-3 {
+    animation-delay: 0.6s;
+  }
+    
+   */
+  /* @keyframes fadeInUp {
     0% {
       opacity: 0;
       transform: translateY(40px);
@@ -41,7 +104,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
+  } */
   @media (max-width: 480px) {
     .features-section {
       padding-left: 1rem;
@@ -73,6 +136,14 @@
     .animate-card.delay-2 {
       animation-delay: 0.4s;
     }
+   
+      .animate-card.delay-0 {
+        animation-delay: 0s;
+      }
+      .animate-card.delay-3 {
+        animation-delay: 0.6s;
+      }
+    
     
     @keyframes fadeInUp {
       0% {
@@ -86,4 +157,4 @@
     }
   }
   
-  
+ 

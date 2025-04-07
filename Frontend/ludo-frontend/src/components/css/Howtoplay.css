@@ -11,7 +11,10 @@
   .section-block {
     margin-bottom: 2rem;
   }
-  
+  .img-fluid{
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
   .custom-card {
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid #ffcc00;

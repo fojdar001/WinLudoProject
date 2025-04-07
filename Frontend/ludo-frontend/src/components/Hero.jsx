@@ -2,27 +2,47 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/hero.css'
 import homepage from '../assets/homepage.png'
+import  { useState, useEffect } from 'react';
+
 
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentSlide((prev) => (prev + 1) % 3); // 3 images hain
+  }, 4000); // change every 4s
+
+  return () => clearInterval(timer);
+}, []);
+
   return (
     <section className="hero-section text-center ">
-      {/* <img src="https://wallpapers.com/images/hd/ludo-king-blue-squares-background-f2l0zc9t3trvwxxz.jpg" class="img-fluid" alt="..."></img> */}
-      {/* <img src="https://miro.medium.com/v2/resize:fit:800/1*Ox55ibp2PrUEyH7pUiWegw.png" class="img-fluid" alt="..."></img> */}
-       {/* <img src="https://games.lol/wp-content/uploads/2022/11/ludo-pc-full-version.jpg" class="img-fluid" alt="..."></img> */}
-       {/* <div className='img-fluid'></div>  */}
+      
+      <div className="slideshow-container">
+  <div className={`slide fade ${currentSlide === 0 ? "active" : ""}`}>
+    <img src="https://appindiatech.com/wp-content/uploads/2023/04/Ludo-Banner.png" className="img-fluid" alt="..." />
+  </div>
+  <div className={`slide fade ${currentSlide === 1 ? "active" : ""}`}>
+    <img src="https://www.getrushapp.com/blog/wp-content/uploads/2022/10/Blog-6-1120x561-1.png" className="img-fluid" alt="..." />
+  </div>
+  <div className={`slide fade ${currentSlide === 2 ? "active" : ""}`}>
+    <img src="https://www.thepopularapps.com/application/upload/Apps/2023/01/ludo-super-titans-89.png" className="img-fluid" alt="..." />
+  </div>
+</div>
 
-       <div className="slideshow-container">
-      <div className="slide fade">
-     <img src="https://appindiatech.com/wp-content/uploads/2023/04/Ludo-Banner.png" className="img-fluid" alt="..."></img>
-     </div>
-    <div className="slide fade">
-    <img src="https://www.getrushapp.com/blog/wp-content/uploads/2022/10/Blog-6-1120x561-1.png" className="img-fluid" alt="..."></img>
-    </div>
-    <div className="slide fade">
-    <img src="https://www.thepopularapps.com/application/upload/Apps/2023/01/ludo-super-titans-89.png" className="img-fluid" alt="..."></img>
-    </div>
-    </div>
+    
+<div className="dots-container">
+  {[0, 1, 2].map((index) => (
+    <span
+      key={index}
+      className={`dot ${currentSlide === index ? "active" : ""}`}
+      onClick={() => setCurrentSlide(index)}
+    ></span>
+  ))}
+</div>
+
 
 
     <div className="container-text">
