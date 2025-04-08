@@ -1,0 +1,71 @@
+.terms-section {
+    background: linear-gradient(135deg, #1e1f3a, #23255b);
+    color: #fff;
+    padding: 75px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .terms-title {
+    font-size: 2.1rem;
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .terms-description {
+    font-size: 1.1rem;
+    color: #ddd;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+  }
+  
+  .terms-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px #00000050;
+  }
+  
+  .terms-subtitle {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .terms-content p,
+  .terms-content ul {
+    color: #eee;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .terms-content ul {
+    padding-left: 20px;
+  }
+  
+  .terms-content ul li {
+    list-style: disc;
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .terms-title {
+      font-size: 2rem;
+    }
+  
+    .terms-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .terms-description {
+      font-size: 1rem;
+    }
+  
+    .terms-content {
+      padding: 20px;
+    }
+  }
+  

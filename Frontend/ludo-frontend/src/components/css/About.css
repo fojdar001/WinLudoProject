@@ -1,0 +1,84 @@
+.about-section {
+    background: linear-gradient(135deg, #1e1f3a, #23255b);
+    color: #ffffff;
+    padding: 70px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .about-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 5px;
+  }
+  
+  .about-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .about-description {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ddd;
+  }
+  
+  .highlight {
+    color: #ffcc00;
+    font-weight: 600;
+  }
+  
+  .about-content {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #00000050;
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .about-content p {
+    color: #eee;
+    line-height: 1.6;
+  }
+  
+  .about-list {
+    list-style: none;
+    padding-left: 0;
+    color: #ddd;
+  }
+  
+  .about-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .about-subtitle {
+      font-size: 1.3rem;
+    }
+  
+    .about-description,
+    .about-list li {
+      font-size: 0.95rem;
+    }
+  
+    .about-content {
+      padding: 20px;
+    }
+  }
+  

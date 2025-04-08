@@ -25,10 +25,10 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto nav-center">
             <Nav.Link as={Link} to="/" href="#home" onClick={() => setExpanded(false)}>Home</Nav.Link>
-            <Nav.Link href="#features" onClick={() => setExpanded(false)}>About</Nav.Link>
+            <Nav.Link as={Link} to="/About"  href="#features" onClick={() => setExpanded(false)}>About</Nav.Link>
             <Nav.Link as={Link} to="/Howtoplay" href="#about" onClick={() => setExpanded(false)}>How to Play</Nav.Link>
-            <Nav.Link href="#contact" onClick={() => setExpanded(false)}>Terms & Conditions</Nav.Link>
-            <Nav.Link href="#contact" onClick={() => setExpanded(false)}>Help</Nav.Link>
+            <Nav.Link  as={Link} to="/Terms&conditions" href="#contact" onClick={() => setExpanded(false)}>Terms & Conditions</Nav.Link>
+            <Nav.Link as={Link} to="/Help" href="#contact" onClick={() => setExpanded(false)}>Help</Nav.Link>
           </Nav>
 
         

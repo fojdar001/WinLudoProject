@@ -11,6 +11,10 @@ import Header from './components/Header';
 import OTPVerify from './pages/OTPVerify';
 import Dashboard from './pages/Dashboard';
 import Howtoplay from './components/howtoplay';
+import About from './components/about';
+import Termsandconditions from './components/Terms&conditions';
+import Help from './components/Help';
+
 
 function App() {
   return (
@@ -33,6 +37,10 @@ function App() {
             path="/Howtoplay"
             element={<Howtoplay/>}
           />
+          <Route path="/About" element={<About/>} />
+          <Route path="/Terms&conditions" element={<Termsandconditions/>} />
+          <Route path="/Help" element={<Help/>} />
+
           <Route path="/register" element={<Register />} />
           <Route path="/verify" element={<OTPVerify />} />
           <Route path="/dashboard" element={<Dashboard />} />
