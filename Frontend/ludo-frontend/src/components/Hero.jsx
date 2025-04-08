@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/hero.css'
 import homepage from '../assets/homepage.png'
 import  { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -34,7 +37,7 @@ useEffect(() => {
     <img src="https://static-perf1.zupee.com/blog-images/uploads/2023/09/ludo-win-cash-online.webp" className="img-fluid" alt="..." />
   </div>
   <div className={`slide fade ${currentSlide === 4 ? "active" : ""}`}>
-    <img src="https://i.ytimg.com/vi/53CRHHDQ-78/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFYgEyh_MA8=&rs=AOn4CLAwJUwlZ2h4bKlYgakubznSIS5LNw" className="img-fluid" alt="..." />
+    <img src="https://time2play.com/app/uploads/2023/04/instant-withdrawal-usa.png" className="img-fluid" alt="..." />
   </div>
 </div>
 
@@ -54,7 +57,8 @@ useEffect(() => {
     <div className="container-text mt-3">
       <h1 className=" text-big display-4  fw-bold ">Play Ludo & Win Real Cash</h1>
         <p className="lead">Compete, win, and withdraw instantly!</p>
-        <button className="hero-btn btn-light btn-lg text-light fw-bold  rounded-pill py-3 px-4 border-0">Start Playing</button>
+        <button className="hero-btn btn-light btn-lg text-light fw-bold  rounded-pill py-3 px-4 border-0">
+          <FontAwesomeIcon icon={faCirclePlay}  />  Start Playing</button>
       </div>
     </section>
   );

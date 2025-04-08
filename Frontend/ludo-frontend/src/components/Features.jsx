@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Feautures.css';
 
 const features = [
-  { title: 'Instant Withdrawal', desc: 'Get your money in seconds via UPI/QR.', color: 'card-red' },
-  { title: 'Secure Platform', desc: '100% safe and encrypted transactions.', color: 'card-green' },
-  { title: '24/7 Support', desc: 'Live chat available anytime you need help.', color: 'card-yellow' },
+  { title: 'Instant Withdrawal', desc: 'Get your money in seconds via UPI/QR.We support UPI and all major payment methods. Withdrawals are processed instantly!', color: 'card-red' },
+  { title: 'Secure Platform', desc: '100% safe and encrypted transactions.We use advanced encryption, fraud detection, and secure UPI gateways to keep your money safe.', color: 'card-green' },
+  { title: ' 24/7 Support', desc: 'Live chat available anytime you need help.Use our in-app Live Chat (bottom-right) available 24/7', color: 'card-yellow' },
   { title: 'Dedicated Customer Support', desc: 'Always here to help — day or night, our support’s got your back!', color: 'card-blue' },
 ];
 
@@ -16,7 +16,7 @@ const Features = () => {
       <div className="container">
         <div className="row">
           {features.map((feature, index) => (
-            <div className="col-12 col-md-6 mb-4" key={index}>
+            <div className="col-6 col-sm-6 col-md-6 mb-4" key={index}>
               <div className={`card custom-card ${feature.color} text-center h-100 animate-card delay-${index}`}>
                 <div className="card-body">
                   <h5 className="card-title text-gold fw-bold">{feature.title}</h5>
@@ -27,6 +27,8 @@ const Features = () => {
           ))}
         </div>
       </div>
+
+     
     </section>
   );
 };

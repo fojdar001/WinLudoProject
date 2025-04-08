@@ -5,6 +5,7 @@
   padding-left: 100px;
   padding-right: 100px;
  
+  
   }
   .custom-card {
     background: inherit; /* This allows card-red/green bg to apply */
@@ -18,93 +19,21 @@
     position: relative;
     z-index: 1;
   }
+ 
   
   
-  .custom-card:hover {
+  /* .custom-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #ffcc00aa;
-  }
-  
-  /* Ludo Colors with transparent background */
-  .card-red {
-    background: linear-gradient(135deg, rgba(204, 2, 2, 0.993), rgb(163, 41, 41)) !important;
-  }
-  .card-green {
-    background: linear-gradient(135deg, rgb(3, 151, 3), rgb(46, 104, 46)) !important;
-   
-  }
-  .card-yellow {
-    background: linear-gradient(135deg, rgb(179, 179, 3), rgb(187, 177, 41)) !important;
-    
-  }
-  .card-blue {
-    background: linear-gradient(135deg, rgba(2, 88, 175, 0.904), rgba(74, 122, 173, 0.781)) !important;
-  
-  }
-  
-  
-  
-  /* Matching glow on hover */
-  .card-red:hover {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-  }
-  .card-green:hover {
-    box-shadow: 0 0 15px rgba(0, 128, 0, 0.5);
-  }
-  .card-yellow:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
-  }
-  .card-blue:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-  }
-  
-  
-
-
-   /* .custom-card {
-    background: rgba(255, 255, 255, 0.05); 
-    border: 2px solid #ffcc00;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
-  }
-  
-  .custom-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #ffcc00aa;
-  }
-  
-  .animate-card {
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-  }
-  
-  .animate-card.delay-1 {
-    animation-delay: 0.2s;
-  }
-  .animate-card.delay-2 {
-    animation-delay: 0.4s;
-  }
-  .animate-card.delay-0 {
-    animation-delay: 0s;
-  }
-  
-  .animate-card.delay-3 {
-    animation-delay: 0.6s;
-  }
-    
-   */
-  /* @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
   } */
+  .card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+   
   @media (max-width: 480px) {
     .features-section {
       padding-left: 1rem;
@@ -113,13 +42,29 @@
       height: auto; /* Remove fixed height for mobile */
     }
   
-    .custom-card {
+    /* .custom-card {
       flex-direction: column;
       padding: 1rem;
       margin-bottom: 1.5rem;
       text-align: center;
+    } */
+    .custom-card {
+      padding: 12px;
+      min-height: 160px; /* Card ki height chhoti kar di */
+      display: flex;
+      flex-direction:column ;
+      justify-content: center;
+      align-items: center;
     }
   
+    .card-title {
+      font-size: 0.85rem; /* Title font size chhota */
+    }
+  
+    .card-text {
+      font-size: 0.7rem; /* Description font size chhota */
+      line-height: 1.3;
+    }
     .custom-card img {
       width: 60px;
       height: 60px;
