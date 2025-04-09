@@ -1,0 +1,137 @@
+.container-login {
+    background: linear-gradient(to bottom, #1e1f3a, #2e2f5e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Login Card */
+  .container-login .card {
+    background: linear-gradient(135deg, #131531, #171a47);
+    border-radius: 20px;
+    padding: 50px 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: none;
+    width: 100%;
+    max-width: 420px;
+    height: 75vh;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Heading */
+  .container-login .card h3 {
+    color: #e7b900 !important;
+    font-weight: bold;
+    font-size: 24px;
+    
+  }
+
+  .login-icon{
+     font-size: 130px;
+     color:#e7b900 ;
+     margin-bottom: 55px;
+     margin-top: 15px;
+  }
+  
+  /* Input Label */
+  .container-login label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #e7b900;
+    margin-bottom: 6px;
+
+  }
+  
+  /* Input Field */
+  .container-login input.form-control {
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 30px;
+    border: 2px solid #e7b900;
+    box-shadow: none;
+    transition: all 0.3s ease;
+   padding-left: 100px;
+   background:linear-gradient(135deg, #131531, #171a47) ;
+   
+  }
+  .container-login input.form-control::placeholder{
+  color:#e7b900;
+  font-weight: 500;
+  }
+  
+  
+  .container-login input.form-control:focus {
+    border-color:#ad8f16;
+    box-shadow: 0 0 2px #ffcc00;
+  }
+  
+  /* Send OTP / Verify Buttons */
+  .container-login .btn {
+    font-weight: 600;
+    padding: 9px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .container-login .btn-primary {
+    background-color: #e7b900;
+    border-color: #ffcc00;
+  }
+  
+  .container-login .btn-primary:hover {
+    background-color: #f7c915;
+  }
+  h6{
+    font-size: small;
+    color: #e7b900;
+    margin-top: 10px;
+  }
+ h6 a {
+    text-decoration: none;
+    color: #ffcc00; /* Ya jo bhi tumhara theme color ho */
+  }
+  
+ h6 a:hover {
+    text-decoration: underline;
+    color: #e9bb05;
+  }
+  
+  
+  .container-login .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .container-login .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  /* Error Alert */
+  .container-login .alert-danger {
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 8px 10px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  @media (max-width: 768px) {
+    .container-login{
+        height: 75vh;
+    }
+    .container-login .card{
+        max-width: 390px;
+        height: 63vh;
+        padding-top: 30px !important;
+    }
+     .login-icon{
+        margin-top: 8px;
+        margin-bottom: 30px;
+     }
+  }
