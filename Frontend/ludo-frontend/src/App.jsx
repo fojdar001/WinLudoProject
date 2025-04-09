@@ -46,7 +46,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/verify" element={<OTPVerify />} />
           <Route path="/login" element={<Login />} /> 
-          <Route path="/verify-login" element={<VerifyLogin />} /> 
+          <Route path="/verify-login-otp" element={<VerifyLogin />} /> 
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
 
