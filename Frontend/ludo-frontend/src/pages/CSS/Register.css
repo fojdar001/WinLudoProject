@@ -1,0 +1,137 @@
+.container-register {
+    min-height: 100vh;
+    background: linear-gradient(90deg, #1e1f3a, #23255b);
+    padding: 90px 20px;
+   
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  /* Register.css */
+  .card {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #131531, #171a47);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  height: 83vh;
+  padding-top: 10px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  max-width: 500px;
+  margin-left: 50px;
+}
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e7b900;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  .register-icon{
+    font-size: 100px;
+    color:#e7b900 ;
+    margin-bottom: 20px;
+    /* margin-left: 140px; */
+
+  }
+  .form-label {
+    font-weight: 500;
+    color: #e7b900;
+    display: none;
+  }
+  
+  .form-control {
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 30px;
+    border: 2px solid #e7b900;
+    box-shadow: none;
+    transition: all 0.3s ease;
+   padding-left: 100px;
+   background:linear-gradient(135deg, #131531, #171a47) ;
+    transition: box-shadow 0.3s;
+    
+  }
+  
+  .form-control:focus {
+    border-color: #e7b900;
+    box-shadow: 0 0 5px #e7b900;
+  }
+  
+  .input-group .btn {
+    border-radius: 30px;
+    border: 2px solid #e7b900;
+  }
+  .form-control::placeholder{
+    color:#e7b900;
+    font-weight: 500;
+
+  }
+  .btn-primary {
+    background-color: #e7b900;
+    border: none;
+    font-weight: 600;
+    border-radius: 30px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #fccb07;
+  }
+  h6 a {
+    text-decoration: none;
+    color: #ffcc00; /* Ya jo bhi tumhara theme color ho */
+  }
+  
+ h6 a:hover {
+    text-decoration: underline;
+    color: #e9bb05;
+  }
+  
+  .alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+    border-radius: 10px;
+  }
+  
+  .invalid-feedback {
+    color: #e3342f;
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      padding: 20px;
+      margin-left: 0;
+    }
+  
+    .card-title {
+      font-size: 1.5rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+    }
+    /* .register-icon{
+        margin-left:135px ;
+    } */
+  }
+  
+  /* Optional: Add a nice fade animation */
+  .card {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

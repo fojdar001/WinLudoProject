@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import './CSS/Register.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
+
 
 const Register = () => {
   const navigate = useNavigate();
@@ -77,12 +83,14 @@ const Register = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container-register  ">
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card shadow-lg border-0">
             <div className="card-body">
               <h3 className="card-title text-center mb-4">Create Your Account</h3>
+              <FontAwesomeIcon icon={faCircleUser} className='register-icon' />
+
               <form onSubmit={handleSubmit} noValidate>
                 {/* Username */}
                 <div className="mb-3">
@@ -93,6 +101,8 @@ const Register = () => {
                     className={`form-control ${errors.username ? 'is-invalid' : ''}`}
                     value={formData.username}
                     onChange={handleChange}
+                     placeholder='Enter Username'
+
                   />
                   <div className="invalid-feedback">{errors.username}</div>
                 </div>
@@ -121,6 +131,7 @@ const Register = () => {
                       className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                       value={formData.password}
                       onChange={handleChange}
+                      placeholder='Enter Password'
                     />
                     <button type="button" className="btn btn-outline-secondary" onClick={togglePasswordVisibility}>
                       {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -139,6 +150,7 @@ const Register = () => {
                       className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
                       value={formData.confirmPassword}
                       onChange={handleChange}
+                      placeholder='Confirm Password'
                     />
                     <button type="button" className="btn btn-outline-secondary" onClick={toggleConfirmVisibility}>
                       {showConfirm ? <FaEyeSlash /> : <FaEye />}
@@ -156,6 +168,7 @@ const Register = () => {
                   Register
                 </button>
               </form>
+              <h6>Already Have an account?<Link to="/Login"> Login.</Link></h6>
             </div>
           </div>
         </div>

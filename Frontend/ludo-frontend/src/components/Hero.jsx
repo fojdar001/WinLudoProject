@@ -58,7 +58,7 @@ useEffect(() => {
       <h1 className=" text-big display-4  fw-bold ">Play Ludo & Win Real Cash</h1>
         <p className="lead">Compete, win, and withdraw instantly!</p>
         <button className="hero-btn btn-light btn-lg text-light fw-bold  rounded-pill py-3 px-4 border-0">
-          <FontAwesomeIcon icon={faCirclePlay}  />  Start Playing</button>
+          <FontAwesomeIcon icon={faCirclePlay} className='btn-icon' />  Start Playing</button>
       </div>
     </section>
   );

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './CSS/Login.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIdBadge } from '@fortawesome/free-regular-svg-icons';
+import { Link } from "react-router-dom";
+
 
 const OTPLogin = () => {
   const [step, setStep] = useState('phone');
@@ -42,21 +47,23 @@ const OTPLogin = () => {
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
+    <div className="container-login d-flex justify-content-center align-items-center min-vh-100">
       <div className="card p-4 shadow col-md-6 col-lg-4">
         <h3 className="text-center mb-4 text-primary">Login to LudoCash</h3>
+        <FontAwesomeIcon icon={faIdBadge} className="login-icon" />
 
         {step === "phone" ? (
           <>
-            <label>Enter Phone Number</label>
+            {/* <label>Enter Phone Number</label> */}
             <input
               type="text"
               className="form-control mb-3"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              placeholder="+91XXXXXXXXXX"
+              placeholder=" Enter Phone Number"
             />
             <button className="btn btn-primary w-100" onClick={sendOTP}>Send OTP</button>
+            <h6>Dont't Have an account?<Link to="/register">  Register Now.</Link></h6>
           </>
         ) : (
           <>
