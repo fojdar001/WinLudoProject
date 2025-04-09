@@ -14,6 +14,8 @@ import Howtoplay from './components/howtoplay';
 import About from './components/about';
 import Termsandconditions from './components/Terms&conditions';
 import Help from './components/Help';
+import VerifyLogin from './pages/VerifyLogin';
+
 
 
 function App() {
@@ -43,8 +45,9 @@ function App() {
 
           <Route path="/register" element={<Register />} />
           <Route path="/verify" element={<OTPVerify />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} /> 
+          <Route path="/verify-login" element={<VerifyLogin />} /> 
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
 
         

@@ -1,81 +1,40 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-const OTPLogin = () => {
-  const [step, setStep] = useState('phone');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [otp, setOtp] = useState('');
+function Login() {
+  const [phone, setPhone] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const sendOTP = async () => {
-    const response = await fetch("http://localhost:8000/api/send-login-otp/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ phone_number: phoneNumber })
-    });
-
-    const data = await response.json();
-    if (response.ok) {
-      setStep("otp");
-      setError('');
-    } else {
-      setError(data.error || "Failed to send OTP");
-    }
-  };
-
-  const verifyOTP = async () => {
-    const response = await fetch("http://localhost:8000/api/verify-login-otp/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ phone_number: phoneNumber, otp })
-    });
-
-    const data = await response.json();
-    if (response.ok) {
-      alert("Login successful!");
-      navigate("/dashboard");
-    } else {
-      setError(data.error || "Invalid OTP");
+  const handleSendOtp = async () => {
+    try {
+      await axios.post('http://localhost:8000/api/send-login-otp/', {
+        phone_number: phone,
+      });
+      localStorage.setItem('loginPhone', phone);
+      navigate('/verify-login-otp');
+    } catch (err) {
+      setError(err.response?.data?.error || 'Something went wrong');
     }
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="card p-4 shadow col-md-6 col-lg-4">
-        <h3 className="text-center mb-4 text-primary">Login to LudoCash</h3>
-
-        {step === "phone" ? (
-          <>
-            <label>Enter Phone Number</label>
-            <input
-              type="text"
-              className="form-control mb-3"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              placeholder="+91XXXXXXXXXX"
-            />
-            <button className="btn btn-primary w-100" onClick={sendOTP}>Send OTP</button>
-          </>
-        ) : (
-          <>
-            <label>Enter OTP</label>
-            <input
-              type="text"
-              className="form-control mb-3"
-              value={otp}
-              onChange={(e) => setOtp(e.target.value)}
-              placeholder="Enter OTP"
-            />
-            <button className="btn btn-success w-100" onClick={verifyOTP}>Verify & Login</button>
-          </>
-        )}
-
-        {error && <div className="alert alert-danger mt-3 text-center">{error}</div>}
-      </div>
+    <div className="container mt-5">
+      <h3>Login via Phone</h3>
+      <input
+        type="text"
+        placeholder="Enter phone number"
+        className="form-control my-2"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+      />
+      {error && <p className="text-danger">{error}</p>}
+      <button className="btn btn-primary" onClick={handleSendOtp}>
+        Send OTP
+      </button>
     </div>
   );
-};
+}
 
-export default OTPLogin;
+export default Login;
