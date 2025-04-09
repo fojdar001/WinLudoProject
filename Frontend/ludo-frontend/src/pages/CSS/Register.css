@@ -52,12 +52,14 @@
    padding-left: 100px;
    background:linear-gradient(135deg, #131531, #171a47) ;
     transition: box-shadow 0.3s;
+    color:#e7b900 ;
     
   }
   
   .form-control:focus {
     border-color: #e7b900;
     box-shadow: 0 0 5px #e7b900;
+    color:#e7b900 ;
   }
   
   .input-group .btn {
