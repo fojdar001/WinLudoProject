@@ -65,7 +65,13 @@
   color:#e7b900;
   font-weight: 500;
   }
-  
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0px 1000px #18183a inset !important;
+    -webkit-text-fill-color: #e7b900 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
   
   .container-login input.form-control:focus {
     border-color:#ad8f16;
@@ -86,6 +92,7 @@
   .container-login .btn-primary {
     background-color: #e7b900;
     border-color: #ffcc00;
+    color: #131531;
   }
   
   .container-login .btn-primary:hover {

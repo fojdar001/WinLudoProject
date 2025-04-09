@@ -3,15 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Feautures.css';
 
 const features = [
-  { title: 'Instant Withdrawal', desc: 'Get your money in seconds via UPI/QR.We support UPI and all major payment methods. Withdrawals are processed instantly!', color: 'card-red' },
-  { title: 'Secure Platform', desc: '100% safe and encrypted transactions.We use advanced encryption, fraud detection, and secure UPI gateways to keep your money safe.', color: 'card-green' },
-  { title: ' 24/7 Support', desc: 'Live chat available anytime you need help.Use our in-app Live Chat (bottom-right) available 24/7', color: 'card-yellow' },
+  { title: 'Instant Withdrawal', desc: 'Get your money in seconds via UPI/QR.', color: 'card-red' },
+  { title: 'Secure Platform', desc: '100% safe and encrypted transactions.', color: 'card-green' },
+  { title: ' 24/7 Support', desc: 'Live chat available anytime you need help.', color: 'card-yellow' },
   { title: 'Dedicated Customer Support', desc: 'Always here to help — day or night, our support’s got your back!', color: 'card-blue' },
 ];
 
 const Features = () => {
   return (
-    <section className="features-section py-5 bg-light">
+    <section className="features-section py-1 bg-light">
       <h3 className="text-center text-warning mt-5 mb-5">Why Choose Us?</h3>
       <div className="container">
         <div className="row">

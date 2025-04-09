@@ -1,9 +1,10 @@
 .features-section {
    background: linear-gradient(90deg, #1e1f3a, #23255b); 
-  padding-bottom: 100px;
+  padding-bottom: 120px;
   height: 100vh;
   padding-left: 100px;
   padding-right: 100px;
+  margin-top: 0%;
  
   
   }
@@ -42,15 +43,10 @@
       height: auto; /* Remove fixed height for mobile */
     }
   
-    /* .custom-card {
-      flex-direction: column;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    } */
+   
     .custom-card {
       padding: 12px;
-      min-height: 160px; /* Card ki height chhoti kar di */
+      min-height: 90px; /* Card ki height chhoti kar di */
       display: flex;
       flex-direction:column ;
       justify-content: center;
@@ -58,11 +54,11 @@
     }
   
     .card-title {
-      font-size: 0.85rem; /* Title font size chhota */
+      font-size: 0.68rem !important; /* Title font size chhota */
     }
   
     .card-text {
-      font-size: 0.7rem; /* Description font size chhota */
+      font-size: 0.6rem; /* Description font size chhota */
       line-height: 1.3;
     }
     .custom-card img {

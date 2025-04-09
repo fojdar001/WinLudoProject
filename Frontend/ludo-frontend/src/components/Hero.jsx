@@ -54,7 +54,7 @@ useEffect(() => {
 
 
 
-    <div className="container-text mt-3">
+    <div className="container-text mt-4">
       <h1 className=" text-big display-4  fw-bold ">Play Ludo & Win Real Cash</h1>
         <p className="lead">Compete, win, and withdraw instantly!</p>
         <button className="hero-btn btn-light btn-lg text-light fw-bold  rounded-pill py-3 px-4 border-0">

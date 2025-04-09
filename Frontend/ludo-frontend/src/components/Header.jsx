@@ -12,7 +12,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" expand="md" expanded={expanded} className="custom-navbar">
       <Container>
         <Navbar.Brand href="#">
-          <img src="" className="logo" /> Logo
+        <Link to="/"><img src="" className="logo" /> Logo</Link> 
         </Navbar.Brand>
 
     
@@ -34,7 +34,7 @@ const Header = () => {
         
           <div className="d-flex">
             <Button as={Link} to="/login" variant="outline-light rounded-pill px-4" className="me-2">Login</Button>
-            <Button as={Link} to="/register" className="rounded-pill px-4 border-0"style={{ backgroundColor: "#ffcc00", color: "#23255b"}}>Register</Button>
+            <Button as={Link} to="/register" className=" me-3 rounded-pill px-4 border-0"style={{ backgroundColor: "#ffcc00", color: "#23255b"}} >Register</Button>
 
           </div>
         </Navbar.Collapse>
