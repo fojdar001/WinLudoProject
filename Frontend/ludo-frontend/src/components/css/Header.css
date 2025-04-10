@@ -42,17 +42,36 @@
     padding: 0 15px;
 
   }
- 
+  a{
+    text-decoration: none;
+    color: beige;
+  }
+  
   .nav-link:hover {
     color: #ffcc00 !important;
   }
-  
-  
+  .me-2{
+    color: #ffcc00;
+    border-color: #ffcc00;
+    font-weight: 500;
+  }
+  .me-2:hover{
+     color: #ffcc00de;
+     background:linear-gradient(135deg, #181a30, #1d1f46);
+     border-color: #ffcc00;
+  }
   .d-flex {
     gap: 10px;
   }
-  /* @media (max-width: 480px){
-    .custom-navbar{
-      height: 55px;
-    } */
-  
+  @media (max-width: 480px){
+   
+    .me-2{
+      margin-top: 20px;
+    }
+    .me-3{
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }

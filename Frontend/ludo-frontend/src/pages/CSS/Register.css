@@ -15,7 +15,7 @@
   border-radius: 20px;
   background: linear-gradient(135deg, #131531, #171a47);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  height: 83vh;
+  height: auto;
   padding-top: 10px;
   /* padding-left: 50px;
   padding-right: 50px; */
@@ -49,15 +49,29 @@
     border: 2px solid #e7b900;
     box-shadow: none;
     transition: all 0.3s ease;
-   padding-left: 100px;
+   /* padding-left: 100px; */
    background:linear-gradient(135deg, #131531, #171a47) ;
     transition: box-shadow 0.3s;
+    color:#e7b900 ;
+    width: 100%;
+   
     
   }
-  
+  form{
+  width: 80%;
+  }
+  input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px #18183a inset !important;
+  -webkit-text-fill-color: #e7b900 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
   .form-control:focus {
     border-color: #e7b900;
     box-shadow: 0 0 5px #e7b900;
+    color:#e7b900 ;
   }
   
   .input-group .btn {
@@ -74,10 +88,12 @@
     border: none;
     font-weight: 600;
     border-radius: 30px;
+    color: #131531;
   }
   
   .btn-primary:hover {
     background-color: #fccb07;
+    color: #131531;
   }
   h6 a {
     text-decoration: none;
@@ -108,7 +124,7 @@
     }
   
     .card-title {
-      font-size: 1.5rem;
+      font-size: 1.5rem !important;
     }
   
     .btn {

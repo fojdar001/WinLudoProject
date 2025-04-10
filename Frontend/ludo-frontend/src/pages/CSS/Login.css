@@ -1,5 +1,5 @@
 .container-login {
-    background: linear-gradient(to bottom, #1e1f3a, #2e2f5e);
+  background: linear-gradient(90deg, #1e1f3a, #23255b);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -58,17 +58,26 @@
     transition: all 0.3s ease;
    padding-left: 100px;
    background:linear-gradient(135deg, #131531, #171a47) ;
+   color:#e7b900 ;
    
   }
   .container-login input.form-control::placeholder{
   color:#e7b900;
   font-weight: 500;
   }
-  
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0px 1000px #18183a inset !important;
+    -webkit-text-fill-color: #e7b900 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
   
   .container-login input.form-control:focus {
     border-color:#ad8f16;
     box-shadow: 0 0 2px #ffcc00;
+    background:linear-gradient(135deg, #131531, #171a47) ;
+    color:#e7b900 ;
   }
   
   /* Send OTP / Verify Buttons */
@@ -83,6 +92,7 @@
   .container-login .btn-primary {
     background-color: #e7b900;
     border-color: #ffcc00;
+    color: #131531;
   }
   
   .container-login .btn-primary:hover {
