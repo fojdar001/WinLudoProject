@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import './css/Chatbox.css'; // for styling
 
 const Chatbox = () => {
@@ -6,13 +6,38 @@ const Chatbox = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
-  const toggleChat = () => setIsOpen(!isOpen);
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen && messages.length === 0) {
+      // Add welcome message once
+      setMessages([{ text: "Welcome to Ludo Game", from: "bot" }]);
+    }
+  };
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (input.trim()) {
-      setMessages([...messages, { text: input, from: 'user' }]);
+      const userMessage = { text: input, from: 'user' };
+      setMessages(prev => [...prev, userMessage]);
+      const userInput = input;
       setInput('');
-      // TODO: Send message to backend
+
+      try {
+        const res = await fetch('http://localhost:8000/api/reply/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: userInput })
+        });
+      
+        const data = await res.json();
+        console.log("Bot reply:", data);  //  Add this for debugging
+      
+        if (data.reply) {
+          const botMessage = { text: data.reply, from: 'bot' };
+          setMessages(prev => [...prev, botMessage]);
+        }
+      } catch (error) {
+        console.error("Error in fetching bot reply:", error);
+      }
     }
   };
 

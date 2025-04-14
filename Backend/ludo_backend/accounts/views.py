@@ -60,36 +60,36 @@ class RegisterView(APIView):
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # ------------------------ VERIFY REGISTER OTP ------------------------
-class VerifyOTPView(APIView):
-    def post(self, request):
-        otp_input = request.data.get("otp")
+# class VerifyOTPView(APIView):
+#     def post(self, request):
+#         otp_input = request.data.get("otp")
 
-        if not otp_input:
-            return Response({"error": "OTP is required."}, status=status.HTTP_400_BAD_REQUEST)
+#         if not otp_input:
+#             return Response({"error": "OTP is required."}, status=status.HTTP_400_BAD_REQUEST)
 
-        matched_phone = None
-        for phone, data in register_otp_storage.items():
-            if data["otp"] == otp_input:
-                matched_phone = phone
-                break
+#         matched_phone = None
+#         for phone, data in register_otp_storage.items():
+#             if data["otp"] == otp_input:
+#                 matched_phone = phone
+#                 break
 
-        if matched_phone:
-            data = register_otp_storage[matched_phone]
-            username = data["username"]
-            password = data["password"]
+#         if matched_phone:
+#             data = register_otp_storage[matched_phone]
+#             username = data["username"]
+#             password = data["password"]
 
-            if not CustomUser.objects.filter(phone_number=matched_phone).exists():
-                CustomUser.objects.create_user(
-                    phone_number=matched_phone,
-                    username=username,
-                    password=password
-                )
+#             if not CustomUser.objects.filter(phone_number=matched_phone).exists():
+#                 CustomUser.objects.create_user(
+#                     phone_number=matched_phone,
+#                     username=username,
+#                     password=password
+#                 )
 
-            del register_otp_storage[matched_phone]
+#             del register_otp_storage[matched_phone]
 
-            return Response({"message": "OTP verified successfully!"}, status=status.HTTP_200_OK)
+#             return Response({"message": "OTP verified successfully!"}, status=status.HTTP_200_OK)
 
-        return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
+#         return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
 
 # ------------------------ RESEND REGISTER OTP ------------------------
 class ResendOTPView(APIView):
@@ -137,26 +137,26 @@ def send_login_otp(request):
     except Exception as e:
         return Response({'error': str(e)}, status=500)
 # ------------------------ VERIFY LOGIN OTP ------------------------
-@api_view(['POST'])
-def verify_login_otp(request):
-    phone_number = request.data.get('phone_number')
-    otp = request.data.get('otp')
+# @api_view(['POST'])
+# def verify_login_otp(request):
+#     phone_number = request.data.get('phone_number')
+#     otp = request.data.get('otp')
 
-    if not phone_number or not otp:
-        return Response({'error': 'Phone number and OTP required'}, status=400)
+#     if not phone_number or not otp:
+#         return Response({'error': 'Phone number and OTP required'}, status=400)
 
-    if login_otp_storage.get(phone_number) != otp:
-        return Response({'error': 'Invalid OTP'}, status=400)
+#     if login_otp_storage.get(phone_number) != otp:
+#         return Response({'error': 'Invalid OTP'}, status=400)
 
-    try:
-        user = CustomUser.objects.get(phone_number=phone_number)
-        refresh = RefreshToken.for_user(user)
-        del login_otp_storage[phone_number]
+#     try:
+#         user = CustomUser.objects.get(phone_number=phone_number)
+#         refresh = RefreshToken.for_user(user)
+#         del login_otp_storage[phone_number]
 
-        return Response({
-            'refresh': str(refresh),
-            'access': str(refresh.access_token),
-            'username': user.username,
-        }, status=200)
-    except CustomUser.DoesNotExist:
-        return Response({'error': 'User not found'}, status=404)
+#         return Response({
+#             'refresh': str(refresh),
+#             'access': str(refresh.access_token),
+#             'username': user.username,
+#         }, status=200)
+#     except CustomUser.DoesNotExist:
+#         return Response({'error': 'User not found'}, status=404)
