@@ -51,7 +51,7 @@ const HowToPlay = () => {
                 <h5 className="card-title text-gold fw-bold">Login</h5>
                 
                 <img src="https://img.freepik.com/premium-vector/login-account-template-background_144316-8185.jpg" className="img-fluid" alt="..."></img>
-                <p className="card-text text-white">Create your account or log in to start playing exciting Ludo matches.</p>
+                <p className="card-text-play text-white py-2">Create your account or log in to start playing exciting Ludo matches.</p>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ const HowToPlay = () => {
               <div className="card-body">
                 <h5 className="card-title text-gold fw-bold">Register</h5>
                 <img src="https://img.freepik.com/premium-vector/web-login-vector-template_783926-727.jpg" className="img-fluid" alt="..."></img>
-                <p className="card-text text-white">Register now and join thousands of players winning real cash every day.</p>
+                <p className="card-text-play text-white py-2">Register now and join thousands of players winning real cash every day.</p>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ const HowToPlay = () => {
               <div className="card-body">
                 <h5 className="card-title text-gold fw-bold">Start Playing</h5>
                 <img src="https://i.pinimg.com/736x/88/09/72/880972877515b3d9d80500dee9c502b7.jpg" className="img-fluid" alt="..."></img>
-                <p className="card-text text-white">Choose a mode, enter the game, and show your skills on the board!</p>
+                <p className="card-text-play py-2 text-white">Choose a mode, enter the game, and show your skills on the board!</p>
               </div>
             </div>
           </div>

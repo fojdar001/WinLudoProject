@@ -5,6 +5,7 @@ import homepage from '../assets/homepage.png'
 import  { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 
@@ -57,8 +58,8 @@ useEffect(() => {
     <div className="container-text mt-4">
       <h1 className=" text-big display-4  fw-bold ">Play Ludo & Win Real Cash</h1>
         <p className="lead">Compete, win, and withdraw instantly!</p>
-        <button className="hero-btn btn-light btn-lg text-light fw-bold  rounded-pill py-3 px-4 border-0">
-          <FontAwesomeIcon icon={faCirclePlay} className='btn-icon' />  Start Playing</button>
+        <Link to={'/login'} className="hero-btn btn-light btn-lg text-light fw-bold  rounded-pill py-3 px-4 border-0">
+          <FontAwesomeIcon icon={faCirclePlay} className='btn-icon' />  Start Playing</Link>
       </div>
     </section>
   );
