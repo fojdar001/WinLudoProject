@@ -1,34 +1,37 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/Feautures.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faLock, faHeadset, faStar } from '@fortawesome/free-solid-svg-icons';
+import './css/Feautures.css'
 
 const features = [
-  { title: 'Instant Withdrawal', desc: 'Get your money in seconds via UPI/QR.', color: 'card-red' },
-  { title: 'Secure Platform', desc: '100% safe and encrypted transactions.', color: 'card-green' },
-  { title: ' 24/7 Support', desc: 'Live chat available anytime you need help.', color: 'card-yellow' },
-  { title: 'Dedicated Customer Support', desc: 'Always here to help — day or night, our support’s got your back!', color: 'card-blue' },
+  { title: 'Instant Withdrawal', desc: 'Withdraw your earnings instantly via UPI/QR.', icon: faBolt },
+  { title: '100% Secure', desc: 'Safe & encrypted transactions at every step.', icon: faLock },
+  { title: '24/7 Support', desc: 'We’re here anytime you need help.', icon: faHeadset },
+  { title: 'Trusted Platform', desc: 'Thousands of players trust and play daily.', icon: faStar },
 ];
 
 const Features = () => {
   return (
-    <section className="features-section py-1 bg-light">
-      <h3 className="text-center text-warning mt-5 mb-5">Why Choose Us?</h3>
-      <div className="container">
+    <section className="features-section text-white">
+      <div className="container py-5">
+        <h3 className="text-center text-warning fw-bold mb-5">Why Choose Us?</h3>
         <div className="row">
           {features.map((feature, index) => (
-            <div className="col-6 col-sm-6 col-md-6 mb-4" key={index}>
-              <div className={`card custom-card ${feature.color} text-center h-100 animate-card delay-${index}`}>
-                <div className="card-body">
-                  <h5 className="card-title text-gold fw-bold">{feature.title}</h5>
-                  <p className="card-text text-white">{feature.desc}</p>
+            <div className="col-12 col-sm-6 col-lg-3 mb-4" key={index}>
+              <div className="feature-card p-4 text-center h-100 d-flex flex-column justify-content-between animate-card">
+                <div>
+                  <div className="feature-icon mb-3 fs-2 text-warning">
+                    <FontAwesomeIcon icon={feature.icon} />
+                  </div>
+                  <h5 className="fw-bold text-warning mb-2">{feature.title}</h5>
+                  <p className="mb-0 text-light small">{feature.desc}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-     
     </section>
   );
 };

@@ -28,7 +28,9 @@
     transform: scale(1.05);
     box-shadow: 0 0 15px #ffcc00aa;
   }
-  
+  .custom-card .custom-text{
+    font-size: 20px !important;
+  }
   .animate-card {
     animation: fadeInUp 0.8s ease forwards;
     opacity: 0;
