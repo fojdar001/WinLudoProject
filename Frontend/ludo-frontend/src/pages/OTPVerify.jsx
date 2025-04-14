@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CSS/OTPVerify.css'
 
 const OTPVerify = () => {
   const [otp, setOtp] = useState('');
@@ -80,20 +81,21 @@ const OTPVerify = () => {
   };
 
   return (
-    <div className="container mt-5" style={{ maxWidth: "400px" }}>
-      <h3 className="mb-4 text-center">📲 Verify OTP</h3>
+    <section className='resgister-verify'>
+    <div className="container-verify ">
+      <h3 className=" text  text-center">Verify OTP</h3>
 
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter OTP"
-          className="form-control mb-3"
+          className="form-control-otp mb-3"
           value={otp}
           onChange={(e) => setOtp(e.target.value)}
           required
         />
 
-        <button className="btn btn-success w-100" type="submit" disabled={loading}>
+        <button className="btn-otp btn-warning w-100" type="submit" disabled={loading}>
           {loading ? "Verifying..." : "Verify OTP"}
         </button>
       </form>
@@ -102,7 +104,7 @@ const OTPVerify = () => {
         <p>
           Didn't receive the code?{" "}
           <button
-            className="btn btn-sm btn-outline-primary"
+            className="btn-resend btn-sm btn-outline-primary"
             onClick={handleResend}
             disabled={resendLoading || !phone}
           >
@@ -125,6 +127,7 @@ const OTPVerify = () => {
         </button>
       )}
     </div>
+    </section>
   );
 };
 

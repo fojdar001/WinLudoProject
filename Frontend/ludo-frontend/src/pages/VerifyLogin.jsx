@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './CSS/Verifylogin.css';
 
 function VerifyLogin() {
   const [otp, setOtp] = useState('');
@@ -23,18 +24,21 @@ function VerifyLogin() {
   };
 
   return (
-    <div className="container mt-5">
+    <section className='otp-section'>
+    <div className="container ">
       <h3>Enter OTP</h3>
       <input
         type="text"
-        className="form-control my-2"
+        placeholder="Enter OTP"
+        className="form-otp form-control my-2"
         value={otp}
         onChange={(e) => setOtp(e.target.value)}
       />
-      <button className="btn btn-success" onClick={handleVerify}>
+      <button className="btn-otp btn-warning " onClick={handleVerify}>
         Verify OTP
       </button>
     </div>
+    </section>
   );
 }
 
