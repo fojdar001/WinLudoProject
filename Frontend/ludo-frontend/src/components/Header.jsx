@@ -12,7 +12,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" expand="md" expanded={expanded} className="custom-navbar">
       <Container>
         <Navbar.Brand href="#">
-        <Link to="/"><img src="" className="logo" /> Logo</Link> 
+        <Link to="/"><img src="" className="logo" /> ROCKLODU</Link> 
         </Navbar.Brand>
 
     
