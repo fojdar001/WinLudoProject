@@ -20,7 +20,7 @@ const Features = () => {
         <h3 className="text-center text-warning fw-bold mb-5">Why Choose Us?</h3>
         <div className="row">
           {features.map((feature, index) => (
-            <div className="col-6 col-sm-6 col-lg-3 mb-4" key={index}>
+            <div className="col-6 col-sm-6 col-lg-6 mb-4" key={index}>
               <div className="feature-card p-4 text-center h-100 d-flex flex-column justify-content-between animate-card">
                 <div>
                   <div className="feature-icon mb-3 fs-2 text-warning">

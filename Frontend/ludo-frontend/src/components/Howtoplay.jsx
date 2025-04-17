@@ -1,80 +1,70 @@
-import React from "react";
-import "./css/HowToPlay.css";
+import React from 'react';
+import './css/HowToPlay.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCoins,
+  faGamepad,
+  faCode,
+  faClock,
+  faCamera,
+  faTrophy,
+} from '@fortawesome/free-solid-svg-icons';
 
 const HowToPlay = () => {
   return (
-    <section className="howtoplay-section text-white ">
-      <div className="container">
-        <h2 className="text-center fw-bold mb-4 text-warning">How to Play</h2>
+    <section className="how-to-play-section text-white">
+      <div className="container py-5">
+        <h2 className="text-center text-warning mb-5 fw-bold">How to Play & Win Real Cash</h2>
 
-        <div className="section-block">
-          <h4 className="text-gold">🧩 Game Setup</h4>
-          <p>
-            Each player gets 4 tokens. The game board has 4 colored bases, and tokens start from their respective bases.
-            You must roll a 6 to release your tokens onto the board.
-          </p>
-        </div>
-
-        <div className="section-block">
-          <h4 className="text-gold">🎯 Objective</h4>
-          <p>
-            Move all your tokens from the base to the center home area before your opponents do.
-            The first player to get all 4 tokens home wins.
-          </p>
-        </div>
-
-        <div className="section-block">
-          <h4 className="text-gold">📜 Game Rules</h4>
-          <ul className="rules-list">
-            <li>Rolling a 6 grants an extra turn.</li>
-            <li>You can capture opponent tokens by landing on the same square.</li>
-            <li>Safe zones cannot be attacked by opponents.</li>
-            <li>You must roll the exact number to enter the home area.</li>
-          </ul>
-        </div>
-
-        <div className="section-block">
-          <h4 className="text-gold">🏆 Winning Strategies</h4>
-          <ul className="strategies-list">
-            <li>Spread your tokens instead of moving one quickly.</li>
-            <li>Use safe zones smartly to block others.</li>
-            <li>Plan ahead before attacking opponent tokens.</li>
-            <li>Keep one token near home to finish fast in the end game.</li>
-          </ul>
-        </div>
-
-        <h3 className="text-center text-warning mt-5 mb-4">Get Started</h3>
-        <div className="row g-4 justify-content-center">
-          <div className="col-md-4">
-            <div className="card custom-card text-center h-100 animate-card">
-              <div className="card-body">
-                <h5 className="card-title text-gold fw-bold">Login</h5>
-                
-                <img src="https://img.freepik.com/premium-vector/login-account-template-background_144316-8185.jpg" className="img-fluid" alt="..."></img>
-                <p className="card-text-play text-white py-2">Create your account or log in to start playing exciting Ludo matches.</p>
-              </div>
+        <div className="row g-4">
+          <div className="col-md-6 col-lg-4">
+            <div className="play-card p-4 text-center">
+              <FontAwesomeIcon icon={faCoins} className="step-icon mb-3" />
+              <h5 className="text-warning fw-bold">1. Join & Add Money</h5>
+              <p>Register or log in to your account. Go to the wallet section and add funds using UPI, QR or other secure options.</p>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="card custom-card text-center h-100 animate-card delay-1">
-              <div className="card-body">
-                <h5 className="card-title text-gold fw-bold">Register</h5>
-                <img src="https://img.freepik.com/premium-vector/web-login-vector-template_783926-727.jpg" className="img-fluid" alt="..."></img>
-                <p className="card-text-play text-white py-2">Register now and join thousands of players winning real cash every day.</p>
-              </div>
+
+          <div className="col-md-6 col-lg-4">
+            <div className="play-card p-4 text-center">
+              <FontAwesomeIcon icon={faGamepad} className="step-icon mb-3" />
+              <h5 className="text-warning fw-bold">2. Create Room on Ludo King</h5>
+              <p>Open the Ludo King app, create a room, and note down the 6-digit room code generated for that game.</p>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="card custom-card text-caenter h-100 animate-card delay-2">
-              <div className="card-body">
-                <h5 className="card-title text-gold fw-bold">Start Playing</h5>
-                <img src="https://i.pinimg.com/736x/88/09/72/880972877515b3d9d80500dee9c502b7.jpg" className="img-fluid" alt="..."></img>
-                <p className="card-text-play py-2 text-white">Choose a mode, enter the game, and show your skills on the board!</p>
-              </div>
+
+          <div className="col-md-6 col-lg-4">
+            <div className="play-card p-4 text-center">
+              <FontAwesomeIcon icon={faCode} className="step-icon mb-3" />
+              <h5 className="text-warning fw-bold">3. Enter Room Code</h5>
+              <p>Return to our website and paste the room code in the "Join Game" section so we can track your game and match.</p>
+            </div>
+          </div>
+
+          <div className="col-md-6 col-lg-4">
+            <div className="play-card p-4 text-center">
+              <FontAwesomeIcon icon={faClock} className="step-icon mb-3" />
+              <h5 className="text-warning fw-bold">4. Timer Starts</h5>
+              <p>Once both players join, a timer will start. Complete the match before the timer ends to ensure fair results.</p>
+            </div>
+          </div>
+
+          <div className="col-md-6 col-lg-4">
+            <div className="play-card p-4 text-center">
+              <FontAwesomeIcon icon={faCamera} className="step-icon mb-3" />
+              <h5 className="text-warning fw-bold">5. Upload Match Screenshot</h5>
+              <p>Take a clear screenshot of your win/loss result and upload it to our system for quick verification.</p>
+            </div>
+          </div>
+
+          <div className="col-md-6 col-lg-4">
+            <div className="play-card p-4 text-center">
+              <FontAwesomeIcon icon={faTrophy} className="step-icon mb-3" />
+              <h5 className="text-warning fw-bold">6. Win Rewards Instantly</h5>
+              <p>If you win, the money will be instantly credited to your wallet. If you lose, the bet amount is deducted.</p>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

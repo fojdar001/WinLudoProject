@@ -1,68 +1,57 @@
-.howtoplay-section {
-    background: linear-gradient(135deg, #1e1f3a, #23255b);
-    padding-top: 90px;
-    padding-bottom: 100px;
-  }
+.how-to-play-section {
+  background: linear-gradient(90deg, #1e1f3a, #23255b);
+  padding-top: 60px;
+}
+
+
+.play-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  min-height: 280px;
+}
+.play-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(90deg, #fcbd00, #fcd146, #ecb308);
+  background-size: 300% 300%;
+  z-index: -1;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: pulseGlow 4s ease infinite;
+}
+.play-card:hover::before {
+  opacity: 0.6;  
+}
+.play-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
   
-  .text-gold {
-    color: #ffcc00;
-  }
-  
-  .section-block {
-    margin-bottom: 2.1rem;
-  }
-  .img-fluid{
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-  .custom-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid #ffcc00;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
-  }
-  
-  .custom-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #ffcc00aa;
-  }
-  .custom-card .custom-text{
-    font-size: 20px !important;
-  }
-  .animate-card {
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-  }
-  
-  .animate-card.delay-1 {
-    animation-delay: 0.2s;
-  }
-  .animate-card.delay-2 {
-    animation-delay: 0.4s;
-  }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive */
-  @media (max-width: 480px) {
-    .custom-card {
-      padding: 1rem;
-    }
-  
-    .howtoplay-section h2,
-    .howtoplay-section h3 {
-      font-size: 1.5rem;
-    }
-  }
-  
+}
+.play-card:hover .step-icon,
+.play-card:hover h5 ,
+.play-card:hover p{
+  color: #23255b !important; /* golden on hover */
+ 
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  color: #ffc107;
+}
+
+.play-card h5 {
+  font-size: 1.2rem;
+}
+
+.play-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
