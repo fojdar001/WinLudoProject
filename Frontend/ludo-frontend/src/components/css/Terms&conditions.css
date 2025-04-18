@@ -1,71 +1,83 @@
-.terms-section {
-    background: linear-gradient(135deg, #1e1f3a, #23255b);
-    color: #fff;
-    padding: 90px 20px;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .terms-title {
-    font-size: 2.1rem;
-    text-align: center;
-    color: #ffcc00;
-    margin-bottom: 30px;
-    font-weight: bold;
-  }
-  
-  .terms-description {
-    font-size: 1.1rem;
-    color: #ddd;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 40px;
-  }
-  
-  .terms-content {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
+.terms-section{
+  padding: 60px 20px !important;
+  background: linear-gradient(90deg, #1e1f3a, #23255b);
+  color: white;
+}
+.tc-container {
+  max-width: 90%;
+  margin: 0px auto;
+  padding: 30px;
+  background: transparent;
+    border-radius: 20px;
+}
+
+.tc-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.tc-section {
+  background-color: rgba(255, 255, 255, 0.05);
+    padding: 25px;
     border-radius: 16px;
-    box-shadow: 0 0 10px #00000050;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #00000040;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.7s ease forwards;
+  
+}
+
+
+
+.tc-section h2 {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tc-section p {
+  color: #e0e0e0;
+  font-size: 1.2rem ;
+  font-weight: 300 ;
+}
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .terms-subtitle {
-    font-size: 1.5rem;
-    color: #ffcc00;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
-  
-  .terms-content p,
-  .terms-content ul {
-    color: #eee;
-    line-height: 1.6;
-    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tc-heading {
+    font-size: 1.9rem;
   }
-  
-  .terms-content ul {
-    padding-left: 20px;
+  .tc-section{
+    padding: 19px;
   }
-  
-  .terms-content ul li {
-    list-style: disc;
-    margin-bottom: 8px;
+
+  .tc-section h2 {
+    font-size: 1.1rem;
   }
-  
-  @media (max-width: 768px) {
-    .terms-title {
-      font-size: 2rem;
-    }
-  
-    .terms-subtitle {
-      font-size: 1.2rem;
-    }
-  
-    .terms-description {
-      font-size: 1rem;
-    }
-  
-    .terms-content {
-      padding: 20px;
-    }
+
+  .tc-section p {
+    font-size: 1rem;
   }
-  
+
+  .tc-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+}

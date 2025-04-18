@@ -1,35 +1,79 @@
 import React from 'react';
 import './css/About.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBullseye,
+  faLock,
+  faMoneyBillWave,
+  faUserCheck,
+  faCheckCircle,
+  faHeadset,
+  faShieldAlt
+} from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   return (
-    <section className="about-section">
-      <div className="about-container">
-        <h2 className="about-title">About Ludo Game</h2>
-        <p className="about-description">
-          Welcome to <span className="highlight">Ludo </span>, the ultimate destination to relive your favorite childhood game with a modern twist!<br/>You can now enjoy Ludo online for free or play with real cash for added excitement.You can play for free, challenge yourself in cash games, or join tournaments. <br/>If you're just looking for some casual fun , you can play the game online for free.Even in the free version, you still have the chance to win exciting cash prizes. NO need to spend anything to enjoy the classic ludo game online.Simply join  game, test your skills and see if you can win!
+    <section className="about-winludo text-white">
+      <div className="container">
+        <h2 className="text-center  mb-4 fw-bold" style={{ color: ' #FFD700' }}>About RockLudo</h2>
+        <p className="lead text-center mb-5 text-light fs-5">
+          Welcome to <strong>RockLudo</strong>, India’s most trusted and exciting platform for real-money Ludo battles!
+          We combine the love for the classic Ludo game with modern technology and secure payments to bring you an engaging experience where fun meets opportunity.
         </p>
 
-        <div className="about-content">
-          <h4 className="about-subtitle">Our Mission</h4>
-          <p>
-            At Ludo Game, we aim to provide a fun, fair, and thrilling platform for Ludo lovers across the globe.
-            With lightning-fast withdrawals, secure gameplay, and 24/7 customer support — we bring you the best digital Ludo experience ever.
-          </p>
+        <div className="row align-items-center mb-5 flex-column flex-md-row text-center text-md-start ">
+          <div className="col-md-6 mb-4 mb-md-0">
+            <img src="https://games.lol/wp-content/uploads/2022/03/ludo-game-gameplay-on-pc.jpg" className="img-fluid rounded-4 shadow" alt="About RockLudo" />
+          </div>
+          <div className="col-md-6">
+            <h4 className=" mb-3 " style={{ color: ' #FFD700' }}>What Makes Us Special?</h4>
+            <ul className="list-unstyled fs-5">
+  <li className="mb-3 special-point"><i className="fas fa-bullseye me-2 text-warning"></i><strong>100% Skill-Based:</strong> Every match is a true test of your strategy and skill, not luck.</li>
+  <li className="mb-3 special-point"><i className="fas fa-lock me-2 text-warning"></i><strong>Secure Platform:</strong> Built with end-to-end encryption to protect your data and money.</li>
+  <li className="mb-3 special-point"><i className="fas fa-wallet me-2 text-warning"></i><strong>Instant Withdrawals:</strong> Winnings are sent to your UPI/Paytm in minutes, not days.</li>
+  <li className="mb-3 special-point"><i className="fas fa-users me-2 text-warning"></i><strong>Real Players Only:</strong> All users are verified – no bots, no fake matches.</li>
+</ul>
 
-          <h4 className="about-subtitle">Why Choose Us?</h4>
-          <ul className="about-list">
-            <li>🛡️ 100% secure and trusted platform</li>
-            <li>💸 Instant withdrawals through UPI & QR</li>
-            <li>🎮 Real-time multiplayer gaming</li>
-            <li>🧑‍💻 24/7 Dedicated support</li>
-          </ul>
+          </div>
+        </div>
 
-          <h4 className="about-subtitle">Join the Ludo Revolution!</h4>
-          <p>
-            Whether you're playing casually or competitively, <span className="highlight">Ludo </span> is your perfect arena. Get started today and turn your skills into rewards!
-          </p>
+        <div className="row mb-5">
+          <div className="col-md-12">
+            <h4 className="mb-3 text-center" style={{ color: ' #FFD700' }}>Our Mission</h4>
+            <p className="fs-5 text-center text-light">
+              At WinLudo, we aim to create a fair, fun, and secure environment for passionate Ludo players to compete,
+              win, and grow. Whether you're a casual gamer or a competitive player, our platform gives you the stage
+              to shine and earn while you play.
+            </p>
+          </div>
+        </div>
+
+        <div className="row mb-5">
+          <div className="col-md-12">
+            <h4 className=" mb-3 text-center"style={{ color: ' #FFD700' }}>How We Work</h4>
+            <p className="fs-5 text-center text-light">
+              Players create or join bets using real game codes from the Ludo King app. Once the game is played, the winner submits the screenshot for verification.
+              Our system or support team verifies the result and ensures the winning amount is credited instantly. All of this happens with top-notch transparency.
+            </p>
+          </div>
+        </div>
+
+        <div className="row mb-5">
+          <div className="col-md-12">
+            <h4 className=" mb-3 text-center" style={{ color: ' #FFD700' }}>Why Trust Us?</h4>
+            <ul className="list-unstyled text-center fs-5">
+              <li><FontAwesomeIcon icon={faCheckCircle} className="me-2 text-warning " /> Over 10,000+ satisfied users</li>
+              <li><FontAwesomeIcon icon={faMoneyBillWave} className="me-2 text-warning" /> Instant UPI withdrawals</li>
+              <li><FontAwesomeIcon icon={faHeadset} className="me-2 text-warning" /> 24/7 live support</li>
+              <li><FontAwesomeIcon icon={faShieldAlt} className="me-2 text-warning" /> Strict anti-cheat verification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="text-center mt-4">
+          <h5 className=" mb-3"style={{ color: ' #FFD700' }}>Join the Ludo revolution. Play Smart. Win Big.</h5>
+          <a href="/register" className="btn btn-warning px-4 py-2 fw-bold rounded-pill">Start Playing Now</a>
         </div>
       </div>
     </section>

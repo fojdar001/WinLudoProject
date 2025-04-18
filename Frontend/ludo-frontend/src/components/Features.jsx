@@ -61,7 +61,7 @@ const Features = () => {
     </div>
 
 
-    </section>
+    
 
     <section className="security-promise">
   <h2 className="section-title">Our Security Promise</h2>
@@ -91,6 +91,7 @@ const Features = () => {
       <p>Instant Withdrawals</p>
     </div>
   </div>
+</section>
 </section>
 
     </>

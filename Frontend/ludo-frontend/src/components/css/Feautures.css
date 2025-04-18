@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
+  border: 1px solid #ffc10783;
 }
 .animate-card:hover {
   transform: translateY(-8px) ;
@@ -59,9 +60,9 @@
 }
 
 .how-it-works-section h2 {
-  color: #ffc107;
+  color: #FFD700;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 40px;
   animation: fadeInDown 1s ease-in-out;
 }
@@ -70,7 +71,7 @@
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   padding: 25px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #ffc10783;
   transition: all 0.4s ease-in-out;
   position: relative;
   overflow: hidden;
@@ -109,7 +110,7 @@
 
 
 .step-card h4 {
-  color: #ffca28;
+  color: #FFD700;
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 10px;
@@ -140,16 +141,18 @@
   padding: 60px 20px;
   text-align: center;
   color: #FFD700; /* Golden text */
-  animation: fadeIn 1s ease-in-out;
+  
+  
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 30px;
   font-weight: bold;
   font-family: 'Segoe UI', sans-serif;
   color: #FFD700;
   text-shadow: 0 0 5px #000;
+  padding-bottom: 10px;
 }
 
 .security-cards {
@@ -157,19 +160,20 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
+  
 }
 
 .card-security {
-  background: rgba(255, 255, 255, 0.08); /* light whitish transparent */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  background: rgba(255, 255, 255, 0.08); 
   color: #fff;
   width: 220px;
   padding: 25px 15px;
   border-radius: 12px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px); /* glass effect */
+  backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #ffc10783;
 }
 
 .card-security:hover {
@@ -189,16 +193,7 @@
   color:#FFD700  ;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 @media (max-width: 480px) {
   .security-cards {
     flex-direction: row;

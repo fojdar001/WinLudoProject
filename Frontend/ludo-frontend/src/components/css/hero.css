@@ -177,10 +177,12 @@
  .dot{
   height: 6px;
   width: 6px;
+  
  }
  .dots-container{
   margin-bottom: 20px;
  }
+ 
  .text-big{
   font-size: 25px;
  }

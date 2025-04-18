@@ -1,5 +1,5 @@
 .help-section {
-    background: linear-gradient(to bottom, #1e1f3a, #2e2f5e);
+  background: linear-gradient(90deg, #1e1f3a, #23255b);
     color: #fff;
     padding: 90px 20px;
     font-family: 'Segoe UI', sans-serif;
@@ -30,6 +30,7 @@
     border-radius: 16px;
     margin-bottom: 25px;
     box-shadow: 0 0 10px #00000040;
+    animation: slideIn 0.7s ease forwards;
   }
   
   .help-block h4 {
@@ -42,6 +43,16 @@
     color: #ddd;
     font-size: 1rem;
     line-height: 1.6;
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
   
   @media (max-width: 768px) {

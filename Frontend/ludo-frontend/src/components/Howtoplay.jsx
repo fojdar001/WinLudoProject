@@ -1,70 +1,60 @@
 import React from 'react';
-import './css/HowToPlay.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCoins,
-  faGamepad,
-  faCode,
-  faClock,
-  faCamera,
-  faTrophy,
-} from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus, faWallet, faGamepad, faUsers, faCheckCircle, faUpload, faMoneyBillTransfer } from '@fortawesome/free-solid-svg-icons';
+import './css/HowToPlay.css';
+
+const steps = [
+  {
+    icon: faUserPlus,
+    title: 'Register / Login',
+    desc: 'Sign up with your name, number & password. Already have an account? Just log in.',
+  },
+  {
+    icon: faWallet,
+    title: 'Add Money to Wallet',
+    desc: 'Top up your wallet securely using UPI, Card, or Paytm.',
+  },
+  {
+    icon: faGamepad,
+    title: 'Create Bet',
+    desc: 'Set entry fee, choose game type & paste Ludo King code. Your bet will go live.',
+  },
+  {
+    icon: faUsers,
+    title: 'Join Bet',
+    desc: 'Browse open bets and join one. You’ll receive the game code for Ludo King.',
+  },
+  {
+    icon: faCheckCircle,
+    title: 'Play Game',
+    desc: 'Open Ludo King, enter the code & play. Win with your skills!',
+  },
+  {
+    icon: faUpload,
+    title: 'Submit Result',
+    desc: 'Upload win screenshot for verification. Opponent or system verifies it.',
+  },
+  {
+    icon: faMoneyBillTransfer,
+    title: 'Get Paid',
+    desc: 'If verified, your winnings will be added to your wallet. Withdraw anytime!',
+  },
+];
 
 const HowToPlay = () => {
   return (
-    <section className="how-to-play-section text-white">
-      <div className="container py-5">
-        <h2 className="text-center text-warning mb-5 fw-bold">How to Play & Win Real Cash</h2>
-
-        <div className="row g-4">
-          <div className="col-md-6 col-lg-4">
-            <div className="play-card p-4 text-center">
-              <FontAwesomeIcon icon={faCoins} className="step-icon mb-3" />
-              <h5 className="text-warning fw-bold">1. Join & Add Money</h5>
-              <p>Register or log in to your account. Go to the wallet section and add funds using UPI, QR or other secure options.</p>
+    <section className="htp-section">
+      <h2 className="htp-heading text-center">How to Play & Win</h2>
+      <div className="htp-cards">
+        {steps.map((step, index) => (
+          <div className="htp-card" key={index}>
+            <div className="htp-icon">
+              <FontAwesomeIcon icon={step.icon} />
             </div>
+            <h4>{step.title}</h4>
+            <p>{step.desc}</p>
           </div>
-
-          <div className="col-md-6 col-lg-4">
-            <div className="play-card p-4 text-center">
-              <FontAwesomeIcon icon={faGamepad} className="step-icon mb-3" />
-              <h5 className="text-warning fw-bold">2. Create Room on Ludo King</h5>
-              <p>Open the Ludo King app, create a room, and note down the 6-digit room code generated for that game.</p>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4">
-            <div className="play-card p-4 text-center">
-              <FontAwesomeIcon icon={faCode} className="step-icon mb-3" />
-              <h5 className="text-warning fw-bold">3. Enter Room Code</h5>
-              <p>Return to our website and paste the room code in the "Join Game" section so we can track your game and match.</p>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4">
-            <div className="play-card p-4 text-center">
-              <FontAwesomeIcon icon={faClock} className="step-icon mb-3" />
-              <h5 className="text-warning fw-bold">4. Timer Starts</h5>
-              <p>Once both players join, a timer will start. Complete the match before the timer ends to ensure fair results.</p>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4">
-            <div className="play-card p-4 text-center">
-              <FontAwesomeIcon icon={faCamera} className="step-icon mb-3" />
-              <h5 className="text-warning fw-bold">5. Upload Match Screenshot</h5>
-              <p>Take a clear screenshot of your win/loss result and upload it to our system for quick verification.</p>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4">
-            <div className="play-card p-4 text-center">
-              <FontAwesomeIcon icon={faTrophy} className="step-icon mb-3" />
-              <h5 className="text-warning fw-bold">6. Win Rewards Instantly</h5>
-              <p>If you win, the money will be instantly credited to your wallet. If you lose, the bet amount is deducted.</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
