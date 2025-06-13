@@ -1,5 +1,5 @@
 
-import './CSS/Dashboard.CSS'
+import './CSS/Dashboard.css'
 import EditProfileModal from './EditProfileModal';
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

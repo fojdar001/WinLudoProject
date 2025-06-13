@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus, faWallet, faGamepad, faUsers, faCheckCircle, faUpload, faMoneyBillTransfer } from '@fortawesome/free-solid-svg-icons';
-import './css/HowToPlay.css';
+import './css/Howtoplay.css';
 
 const steps = [
   {
